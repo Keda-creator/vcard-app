@@ -74,7 +74,7 @@ class _MyAppState extends ConsumerState<MyApp> {
     await Future.delayed(const Duration(milliseconds: 600));
     
     final navContext = rootNavigatorKey.currentContext;
-    if (navContext != null && mounted) {
+    if (navContext != null && navContext.mounted) {
       // Clear any existing overlays or routes that aren't the main scaffold
       try {
         final navigator = Navigator.of(navContext);
@@ -85,7 +85,7 @@ class _MyAppState extends ConsumerState<MyApp> {
         debugPrint('Nav Reset Error: $e');
       }
       
-      if (!mounted) return;
+      if (!navContext.mounted) return;
 
       showModalBottomSheet(
         context: navContext,

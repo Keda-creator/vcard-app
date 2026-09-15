@@ -269,21 +269,17 @@ class _VCardsScreenState extends ConsumerState<VCardsScreen> {
 
     final availability = await NfcManager.instance.checkAvailability();
 
-    if (!mounted) return;
+    if (!context.mounted) return;
 
     if (availability == NfcAvailability.unsupported) {
-      if (context.mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('NFC is not supported on this device')),
-        );
-      }
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('NFC is not supported on this device')),
+      );
       return;
     }
 
     if (availability == NfcAvailability.disabled) {
-      if (context.mounted) {
-        _showNfcDisabledDialog(context);
-      }
+      _showNfcDisabledDialog(context);
       return;
     }
 
@@ -367,10 +363,14 @@ class _VCardsScreenState extends ConsumerState<VCardsScreen> {
           debugPrint('No URL found in tag data structure.');
         },
       ).catchError((e) {
-        _handleNfcError(context, 'NFC Error: $e');
+        if (context.mounted) {
+          _handleNfcError(context, 'NFC Error: $e');
+        }
       });
     } catch (e) {
-      _handleNfcError(context, 'NFC Error: $e');
+      if (context.mounted) {
+        _handleNfcError(context, 'NFC Error: $e');
+      }
     }
   }
 
