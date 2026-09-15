@@ -10,7 +10,7 @@ A premium Flutter application for managing physical business cards (pCards) and 
 
 ### 2. My vCard
 - **Direct Access**: Your own digital identity loaded via WebView.
-- **URL**: `https://bizkonec.com/vcard/admin-login.php`
+- **URL**: `http://vcardpersonal.totalh.net/customer-login.php`
 
 ### 3. pCards (Physical Cards)
 - **Digitization**: Capture front and back of physical cards.

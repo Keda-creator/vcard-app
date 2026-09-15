@@ -66,5 +66,25 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>This app requires camera access to scan business cards and QR codes.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>This app requires microphone access if video features are initialized within the camera component.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This app requires photo library access to upload card images from your gallery.</string>
+	<key>NFCReaderUsageDescription</key>
+	<string>This app requires NFC access to scan digital vCards from NFC tags.</string>
+	<key>com.apple.developer.nfc.readersession.formats</key>
+	<array>
+		<string>NDEF</string>
+	</array>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>http</string>
+		<string>https</string>
+		<string>tel</string>
+		<string>mailto</string>
+		<string>sms</string>
+	</array>
 </dict>
 </plist>
