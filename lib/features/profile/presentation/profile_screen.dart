@@ -46,8 +46,12 @@ class ProfileScreen extends StatelessWidget {
               _buildTile(context, Icons.help_outline, 'Help & Support', onTap: () {
                 context.push('/help-support');
               }),
-              _buildTile(context, Icons.privacy_tip_outlined, 'Privacy Policy'),
-              _buildTile(context, Icons.description_outlined, 'Terms & Conditions'),
+              _buildTile(context, Icons.privacy_tip_outlined, 'Privacy Policy', onTap: () {
+                context.push('/privacy-policy');
+              }),
+              _buildTile(context, Icons.description_outlined, 'Terms & Conditions', onTap: () {
+                context.push('/terms-conditions');
+              }),
             ]),
             _buildSection(context, 'Danger Zone', [
               _buildTile(context, Icons.logout, 'Log Out', color: Colors.red),

@@ -4,6 +4,8 @@ import 'package:bizkonec/features/my_vcard/presentation/my_vcard_screen.dart';
 import 'package:bizkonec/features/pcards/presentation/add_pcard_screen.dart';
 import 'package:bizkonec/features/pcards/presentation/pcards_screen.dart';
 import 'package:bizkonec/features/profile/presentation/help_support_screen.dart';
+import 'package:bizkonec/features/profile/presentation/privacy_policy_screen.dart';
+import 'package:bizkonec/features/profile/presentation/terms_conditions_screen.dart';
 import 'package:bizkonec/features/profile/presentation/profile_screen.dart';
 import 'package:bizkonec/features/vcards/presentation/vcard_scanner_screen.dart';
 import 'package:bizkonec/features/vcards/presentation/vcards_screen.dart';
@@ -79,6 +81,16 @@ final appRouter = GoRouter(
       path: '/help-support',
       parentNavigatorKey: rootNavigatorKey,
       builder: (context, state) => const HelpSupportScreen(),
+    ),
+    GoRoute(
+      path: '/privacy-policy',
+      parentNavigatorKey: rootNavigatorKey,
+      builder: (context, state) => const PrivacyPolicyScreen(),
+    ),
+    GoRoute(
+      path: '/terms-conditions',
+      parentNavigatorKey: rootNavigatorKey,
+      builder: (context, state) => const TermsConditionsScreen(),
     ),
     StatefulShellRoute.indexedStack(
       builder: (context, state, navigationShell) {

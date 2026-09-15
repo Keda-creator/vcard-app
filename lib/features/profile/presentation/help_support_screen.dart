@@ -28,38 +28,34 @@ class HelpSupportScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            _buildSectionHeader('Frequently Asked Questions'),
+            _buildSectionHeader('BizKonec Guide'),
             const SizedBox(height: 16),
             _buildExpansionTile(
-              'What is a vCard?',
-              'A vCard is a digital business card. It allows you to share your contact information, social media links, and website instantly through a QR code or NFC tag.',
+              'Digital vCards',
+              'Your BizKonec Digital vCard is a modern networking tool. It stores your contact info, social links, and website. You can share it via QR code or NFC instantly. Unlike paper cards, digital cards are eco-friendly and always up-to-date.',
             ),
             _buildExpansionTile(
-              'What are pCards?',
-              'pCards (Physical Cards) are digital versions of your paper business cards. You can photograph and crop your physical cards to store them safely in the app with a 3D flip view.',
+              'NFC Smart Cards',
+              'Our physical NFC products allow you to share your digital profile with a single tap. Simply touch your BizKonec NFC card or tag to a compatible smartphone to instantly transmit your professional details.',
             ),
             _buildExpansionTile(
-              'How to scan NFC on iPhone?',
-              'To scan an NFC card on an iPhone, hold the top of your iPhone (near the front camera) close to the NFC tag or card. iPhone 11 and newer models have the scanner always active, while older models may need to open the scanner manually from the Control Center.',
+              'pCard Digitization',
+              'The pCard feature lets you scan and save traditional paper business cards. Using our modern document scanner, you can capture both sides of a card, which are then stored in a searchable 3D flip-view gallery.',
             ),
             _buildExpansionTile(
-              'How to scan NFC on Android?',
-              'For most Android devices, the NFC antenna is located in the middle of the back of the phone. Ensure NFC is enabled in your system settings, then tap the center back of your device against the card.',
-            ),
-             _buildExpansionTile(
-              'NFC Scanning Tips',
-              '• Ensure your phone is unlocked.\n• If you have a very thick phone case, try removing it as it may block the signal.\n• Hold the device still for 1-2 seconds until you feel a vibration.\n• For QR codes, ensure there is sufficient lighting.',
+              'How to scan on iPhone',
+              'iPhone users should tap the top edge of their device against the NFC product. For iPhone 11 and newer, the background scanner is always active. Ensure the screen is on and the phone is unlocked.',
             ),
             _buildExpansionTile(
-              'How do I share my own vCard?',
-              'Navigate to the "My vCard" tab. From there, you can present your digital card to others. They can scan your QR code or you can share your unique link directly.',
+              'How to scan on Android',
+              'Android users should tap the center-back of their device against the NFC product. Make sure NFC is enabled in your system settings and the device is unlocked.',
             ),
             _buildExpansionTile(
-              'Organizing your Cards',
-              'You can find all your digitized paper cards in the "pCards" tab and all received digital profiles in the "vCards" tab. Both sections allow you to search through your collection easily.',
+              'Physical Products',
+              'We offer a variety of physical networking products including metal cards, PVC cards, and smart tags. Each product is integrated with your digital BizKonec profile for seamless professional interactions.',
             ),
             const SizedBox(height: 32),
-            _buildSectionHeader('Contact Us'),
+            _buildSectionHeader('Contact Support'),
             const SizedBox(height: 16),
             Card(
               elevation: 0,
@@ -72,25 +68,25 @@ class HelpSupportScreen extends StatelessWidget {
                 padding: const EdgeInsets.all(20.0),
                 child: Column(
                   children: [
-                    const Icon(Icons.email_outlined, size: 48, color: Colors.blue),
+                    const Icon(Icons.support_agent, size: 48, color: Colors.blue),
                     const SizedBox(height: 16),
                     const Text(
-                      'Need more help?',
+                      'Dedicated Professional Support',
                       style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                     ),
                     const SizedBox(height: 8),
                     const Text(
-                      'Our team is here to assist you with any questions or technical issues.',
+                      'Whether you have questions about your digital vCard, our NFC products, or account management, our team is ready to help.',
                       textAlign: TextAlign.center,
-                      style: TextStyle(color: Colors.grey),
+                      style: TextStyle(color: Colors.grey, height: 1.4),
                     ),
                     const SizedBox(height: 24),
                     ElevatedButton.icon(
                       onPressed: _launchEmail,
-                      icon: const Icon(Icons.send),
-                      label: const Text('Email contact@bizkonec.com'),
+                      icon: const Icon(Icons.email),
+                      label: const Text('contact@bizkonec.com'),
                       style: ElevatedButton.styleFrom(
-                        minimumSize: const Size(double.infinity, 50),
+                        minimumSize: const Size(double.infinity, 56),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(12),
                         ),
